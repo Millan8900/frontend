@@ -72,7 +72,7 @@ export default class Student implements OnInit {
 
   loadBooks(): void {
     this.loading = true;
-    this.http.get<any[]>('https://backend-production-2557.up.railway.app/api/books').subscribe({
+    this.http.get<any[]>('http://localhost:8080/api/books').subscribe({
       next: (data: any) => {
         this.books = Array.isArray(data) ? data : [];
         this.filteredBooks = [...this.books];
@@ -125,7 +125,7 @@ export default class Student implements OnInit {
     const borrowRequest = { userEmail: this.userEmail, bookId: bookId };
     this.requestedBooks.add(bookId);
 
-    this.http.post('https://backend-production-2557.up.railway.app/api/borrow/request', borrowRequest).subscribe({
+    this.http.post('http://localhost:8080/api/borrow/request', borrowRequest).subscribe({
       next: (response: any) => {
         alert(response?.message || '✅ Borrow request sent successfully!');
       },

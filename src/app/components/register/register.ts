@@ -79,7 +79,7 @@ export default class Register {
       role: 'STUDENT'
     };
 
-    this.http.post('https://backend-production-2557.up.railway.app/api/users/register', payload, { responseType: 'text' })
+    this.http.post('http://localhost:8080/api/users/register', payload, { responseType: 'text' })
       .subscribe({
         next: (response) => {
           if (response.includes('successful')) {

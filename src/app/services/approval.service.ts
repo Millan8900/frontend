@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApprovalService {
-  private baseUrl = 'https://backend-production-2557.up.railway.app/api/approval';
+  private baseUrl = 'http://localhost:8080/api/approval';
 
   constructor(private http: HttpClient) {}
 

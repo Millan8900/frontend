@@ -17,7 +17,7 @@ export interface Book {
   providedIn: 'root'
 })
 export class BookService {
-  private baseUrl = 'https://backend-production-2557.up.railway.app/api/librarian/books';
+  private baseUrl = 'http://localhost:8080/api/librarian/books';
 
   constructor(private http: HttpClient) {}
 

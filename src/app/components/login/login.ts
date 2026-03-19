@@ -88,7 +88,7 @@ export class Login implements OnInit, OnDestroy {
 
     this.isLoading = true;
 
-    this.http.post<any>('https://backend-production-2557.up.railway.app/api/users/login', {
+    this.http.post<any>('http://localhost:8080/api/users/login', {
       email:    this.email.trim(),
       password: this.password.trim()
     }).subscribe({

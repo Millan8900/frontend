@@ -24,7 +24,7 @@ export default class AdminSummary {
   }
 
   loadUsers() {
-    this.http.get<any[]>('https://backend-production-2557.up.railway.app/api/admin/users').subscribe({
+    this.http.get<any[]>('http://localhost:8080/api/admin/users').subscribe({
       next: (data) => {
         this.users = data;
         this.calculateTotals();
@@ -43,7 +43,7 @@ export default class AdminSummary {
 
   assignRole(id: number, role: string) {
     this.http.put(
-      `https://backend-production-2557.up.railway.app/api/admin/users/${id}/role?newRole=${role}`,
+      `http://localhost:8080/api/admin/users/${id}/role?newRole=${role}`,
       {},
       { responseType: 'text' }
     ).subscribe({
@@ -63,7 +63,7 @@ export default class AdminSummary {
       return;
     }
     if (confirm(`Are you sure you want to delete ${email}?`)) {
-      this.http.delete(`https://backend-production-2557.up.railway.app/api/admin/users/${id}`, { responseType: 'text' }).subscribe({
+      this.http.delete(`http://localhost:8080/api/admin/users/${id}`, { responseType: 'text' }).subscribe({
         next: (msg) => {
           alert(msg);
           this.loadUsers();

@@ -24,7 +24,7 @@ export default class AdminSummary implements OnInit {
 
   // ✅ Load system summary
   loadSummary() {
-    this.http.get('https://backend-production-2557.up.railway.app/api/admin/summary', { responseType: 'text' })
+    this.http.get('http://localhost:8080/api/admin/summary', { responseType: 'text' })
       .subscribe({
         next: (res) => (this.summary = res),
         error: () => (this.summary = '⚠️ Error loading summary')
@@ -33,7 +33,7 @@ export default class AdminSummary implements OnInit {
 
   // ✅ Load all users
   loadUsers() {
-    this.http.get<any[]>('https://backend-production-2557.up.railway.app/api/admin/users')
+    this.http.get<any[]>('http://localhost:8080/api/admin/users')
       .subscribe({
         next: (res) => (this.users = res),
         error: () => alert('⚠️ Failed to fetch users')
@@ -42,7 +42,7 @@ export default class AdminSummary implements OnInit {
 
   // ✅ Update role dynamically (auto-refreshes UI)
   updateRole(userId: number, newRole: string) {
-    this.http.put(`https://backend-production-2557.up.railway.app/api/admin/users/${userId}/role?newRole=${newRole}`, {}, { responseType: 'text' })
+    this.http.put(`http://localhost:8080/api/admin/users/${userId}/role?newRole=${newRole}`, {}, { responseType: 'text' })
       .subscribe({
         next: (msg) => {
           alert(msg);
@@ -60,7 +60,7 @@ export default class AdminSummary implements OnInit {
     }
 
     if (confirm(`Are you sure you want to delete user ID ${userId}?`)) {
-      this.http.delete(`https://backend-production-2557.up.railway.app/api/admin/users/${userId}`, { responseType: 'text' })
+      this.http.delete(`http://localhost:8080/api/admin/users/${userId}`, { responseType: 'text' })
         .subscribe({
           next: (msg) => {
             alert(msg);

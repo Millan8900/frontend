@@ -29,7 +29,7 @@ export default class LibrarianDashboard implements OnInit {
 
   selectedImage: File | null = null;
 
-  private bookApi = 'https://backend-production-2557.up.railway.app/api/books';
+  private bookApi = 'http://localhost:8080/api/books';
 
   // ========================
   // 📄 PAGINATION
