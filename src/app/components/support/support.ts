@@ -28,7 +28,7 @@ export default class Support {
 
     this.loading = true;
 
-    this.http.post('http://localhost:8080/api/support', {
+    this.http.post('https://backend-production-2557.up.railway.app/api/support', {
       name: this.name,
       email: this.email,
       message: this.message

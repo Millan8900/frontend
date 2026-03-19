@@ -91,7 +91,7 @@ export default class ResetPassword {
 
     // call backend reset-password API
     this.http.post(
-      'http://localhost:8080/api/auth/reset-password',
+      'https://backend-production-2557.up.railway.app/api/auth/reset-password',
       {
         email: this.email,
         otp: this.otp,
