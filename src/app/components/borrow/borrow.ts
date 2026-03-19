@@ -29,7 +29,7 @@ export default class Borrow implements OnInit {
 
  loadBorrowedBooks() {
   const encodedEmail = encodeURIComponent(this.userEmail);
-  this.http.get<any[]>(`http://localhost:8080/api/borrow/user/email/${encodedEmail}`)
+  this.http.get<any[]>(`https://backend-production-2557.up.railway.app/api/borrow/user/email/${encodedEmail}`)
     .subscribe({
       next: data => this.borrowedBooks = data,
       error: err => {
@@ -47,7 +47,7 @@ export default class Borrow implements OnInit {
     }
 
     if (confirm('Are you sure you want to return this book?')) {
-      this.http.post(`http://localhost:8080/api/borrow/return/${recordId}`, {}, { responseType: 'text' })
+      this.http.post(`https://backend-production-2557.up.railway.app/api/borrow/return/${recordId}`, {}, { responseType: 'text' })
         .subscribe({
           next: (response) => {
             alert(response || 'Book returned successfully!');
