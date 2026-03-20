@@ -63,7 +63,7 @@ export default class ForgotPassword {
     }
 
     this.http.post(
-      'https://backend-production-2557.up.railway.app/api/auth/forgot-password',
+      'https://backend-production-35363.up.railway.app/api/auth/forgot-password',
       { email: this.email },
       { responseType: 'text' }
     ).subscribe({
@@ -124,7 +124,7 @@ export default class ForgotPassword {
     }
 
     this.http.post<boolean>(
-      'https://backend-production-2557.up.railway.app/api/auth/verify-otp',
+      'https://backend-production-35363.up.railway.app/api/auth/verify-otp',
       {
         email: this.email,
         otp: this.otp

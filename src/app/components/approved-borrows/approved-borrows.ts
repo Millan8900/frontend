@@ -13,7 +13,7 @@ export default class ApprovedBorrows implements OnInit, OnDestroy {
   sentReminders: Set<number> = new Set();
   intervalId: any;
 
-  private borrowApi = 'https://backend-production-2557.up.railway.app/api/borrow';
+  private borrowApi = 'https://backend-production-35363.up.railway.app/api/borrow';
 
   constructor(private http: HttpClient) {}
 

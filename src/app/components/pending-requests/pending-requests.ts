@@ -14,7 +14,7 @@ export default class PendingRequests implements OnInit, OnDestroy {
   librarianId = 0;
   intervalId: any;
 
-  private borrowApi = 'https://backend-production-2557.up.railway.app/api/borrow';
+  private borrowApi = 'https://backend-production-35363.up.railway.app/api/borrow';
 
   constructor(private http: HttpClient) {}
 
