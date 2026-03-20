@@ -48,8 +48,8 @@ export class Login implements OnInit, OnDestroy {
     { name:'Bhawani', init:'B', avClass:'av-gold',  colorClass:'ac-borrow',  emoji:'📚', action:'just borrowed',    book:'Wings of Fire'            },
     { name:'Anup',   init:'A', avClass:'av-teal',  colorClass:'ac-return',  emoji:'✅', action:'returned',         book:'Rich Dad Poor Dad'        },
     { name:'Thabir',     init:'T', avClass:'av-azure', colorClass:'ac-borrow',  emoji:'📖', action:'just borrowed',    book:'Think & Grow Rich'        },
-    { name:'Uttu',   init:'U', avClass:'av-rose',  colorClass:'ac-reserve', emoji:'🔖', action:'returned',         book:'Ikigai'                   },
-    { name:'Afreen',   init:'A', avClass:'av-gold',  colorClass:'ac-borrow',  emoji:'📚', action:'just borrowed',    book:'The Psychology of Money'  },
+    { name:'Pranjal',   init:'P', avClass:'av-rose',  colorClass:'ac-reserve', emoji:'🔖', action:'returned',         book:'Ikigai'                   },
+    { name:'Debi',   init:'D', avClass:'av-gold',  colorClass:'ac-borrow',  emoji:'📚', action:'just borrowed',    book:'The Psychology of Money'  },
   ];
 
   private actIdx:       number = 0;
